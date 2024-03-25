@@ -1,0 +1,51 @@
+
+
+# Hello World example
+docker container run hello-world
+
+
+# List all your containers with 
+docker container ls
+
+
+
+
+# Find specifics words on docker information
+docker container ls -a | grep hello-world
+
+
+
+
+# Remove a docker conteiner which id start with "3d"
+docker container rm 3d
+
+
+
+###################################################################
+
+
+# Delete docker containers
+docker container prune
+
+
+# Delete docker images
+docker image prune
+
+
+
+# Super remove. Will remove all stopped containers, all netword not used by at least one
+# container, all dangling images and unused build cache.
+docker system prune
+
+
+#####################################################################
+
+
+docker run nginx
+
+
+
+docker run -d nginx
+
+
+

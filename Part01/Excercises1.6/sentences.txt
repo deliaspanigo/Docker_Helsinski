@@ -1,0 +1,68 @@
+
+# EXERCISE 1.6: HELLO DOCKER HUB
+
+# password its avairable in:
+# https://hub.docker.com/r/devopsdockeruh/pull_exercise
+
+# Password its "basics"
+
+
+docker run -it devopsdockeruh/pull_exercise
+
+
+
+
+# Cleaning section
+###############################################################################################
+
+
+# Docker container list...
+docker ps -a
+
+
+# Docker images list
+docker images
+
+
+
+
+# Stoping all docker conteiners...
+docker stop $(docker ps -aq)
+
+
+# Removing all docker containers
+docker rm $(docker ps -aq)
+
+
+# Removing all docker images
+docker rmi $(docker images -aq)
+
+
+
+
+# Prune volumens...
+docker volume prune -f
+
+# Prune containers
+docker container prune -f
+
+# Prune images
+docker image prune -f
+
+
+
+# Prune system
+docker system prune -f
+
+
+
+# Docker containers list...
+docker ps -a
+
+
+# Docker images list...
+docker images ls
+
+
+
+

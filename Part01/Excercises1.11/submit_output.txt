@@ -1,0 +1,25 @@
+# # # SENTENCES
+
+docker run \
+--mount type=bind,source="$(pwd)"/text.log,target=/usr/src/app/text.log \
+devopsdockeruh/simple-web-service
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01/Excercises1.9$ docker run \
+--mount type=bind,source="$(pwd)"/text.log,target=/usr/src/app/text.log \
+devopsdockeruh/simple-web-service
+Starting log output
+<nil>
+open /usr/src/app/text.log: is a directory
+<nil>
+open /usr/src/app/text.log: is a directory
+<nil>
+open /usr/src/app/text.log: is a directory
+<nil>
+open /usr/src/app/text.log: is a directory
+<nil>
+open /usr/src/app/text.log: is a directory
+<nil>
+

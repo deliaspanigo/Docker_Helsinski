@@ -1,0 +1,57 @@
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01/Excercises1.5$ docker run -d -it --name new001 devopsdockeruh/simple-web-service:ubuntu
+Unable to find image 'devopsdockeruh/simple-web-service:ubuntu' locally
+ubuntu: Pulling from devopsdockeruh/simple-web-service
+5d3b2c2d21bb: Pull complete 
+3fc2062ea667: Pull complete 
+75adf526d75b: Pull complete 
+965d4bbb586a: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:ubuntu
+a37c5c175eedf14532a2ac21ba0bf2a47a7c59c78590042d0c41f1a1e0d23ecc
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01/Excercises1.5$ docker exec -it new001 bash
+root@a37c5c175eed:/usr/src/app# tail -f ./text.log
+2024-03-20 20:46:08 +0000 UTC
+2024-03-20 20:46:10 +0000 UTC
+2024-03-20 20:46:12 +0000 UTC
+2024-03-20 20:46:14 +0000 UTC
+2024-03-20 20:46:16 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-03-20 20:46:18 +0000 UTC
+root@a37c5c175eed:/usr/src/app# exit
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01/Excercises1.5$ docker run -d -it --name new002 devopsdockeruh/simple-web-service:alpine
+Unable to find image 'devopsdockeruh/simple-web-service:alpine' locally
+alpine: Pulling from devopsdockeruh/simple-web-service
+ba3557a56b15: Pull complete 
+1dace236434b: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+d9e0424daea3843f83806c5ed816bb8bd21e9a8c6ca8f0931a2efeca2e9a6c8f
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01/Excercises1.5$ docker exec -it new002 sh
+/usr/src/app # tail -f ./text.log
+2024-03-20 20:46:30 +0000 UTC
+2024-03-20 20:46:32 +0000 UTC
+2024-03-20 20:46:34 +0000 UTC
+2024-03-20 20:46:36 +0000 UTC
+2024-03-20 20:46:38 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-03-20 20:46:40 +0000 UTC
+2024-03-20 20:46:42 +0000 UTC
+/usr/src/app # 
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01/Excercises1.5$ docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   3 years ago   15.7MB
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01/Excercises1.5$ 
+

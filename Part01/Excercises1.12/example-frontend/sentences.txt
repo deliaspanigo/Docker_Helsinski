@@ -1,0 +1,61 @@
+
+# MANDATORY EXERCISE 1.12: HELLO, FRONTEND!
+
+# docker build -t my_image .
+# docker run -it --name my_container my_image /bin/bash
+# docker run -it --name my_container -p 5000:5000 my_image
+
+# Cleaning section
+###############################################################################################
+
+
+# Docker container list...
+docker ps -a
+
+
+# Docker images list
+docker images
+
+
+
+
+# Stoping all docker conteiners...
+docker stop $(docker ps -aq)
+
+
+# Removing all docker containers
+docker rm $(docker ps -aq)
+
+
+# Removing all docker images
+docker rmi $(docker images -aq)
+
+
+
+
+# Prune volumens...
+docker volume prune -f
+
+# Prune containers
+docker container prune -f
+
+# Prune images
+docker image prune -f
+
+
+
+# Prune system
+docker system prune -f
+
+
+
+# Docker containers list...
+docker ps -a
+
+
+# Docker images list...
+docker images ls
+
+
+
+

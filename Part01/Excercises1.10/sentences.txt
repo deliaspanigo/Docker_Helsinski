@@ -1,0 +1,72 @@
+
+# EXERCISE 1.10: PORTS OPEN
+
+
+docker run \
+-it \
+--name devtest \
+-p 8080:8080 \
+devopsdockeruh/simple-web-service
+
+docker run devopsdockeruh/simple-web-service
+
+docker run -p 8080:8080 devopsdockeruh/simple-web-service server
+docker run \
+--mount type=bind,source="$(pwd)"/text.log,target=/usr/src/app/text.log \
+devopsdockeruh/simple-web-service
+
+
+# Cleaning section
+###############################################################################################
+
+
+# Docker container list...
+docker ps -a
+
+
+# Docker images list
+docker images
+
+
+
+
+# Stoping all docker conteiners...
+docker stop $(docker ps -aq)
+
+
+# Removing all docker containers
+docker rm $(docker ps -aq)
+
+
+# Removing all docker images
+docker rmi $(docker images -aq)
+
+
+
+
+# Prune volumens...
+docker volume prune -f
+
+# Prune containers
+docker container prune -f
+
+# Prune images
+docker image prune -f
+
+
+
+# Prune system
+docker system prune -f
+
+
+
+# Docker containers list...
+docker ps -a
+
+
+# Docker images list...
+docker images ls
+
+
+
+

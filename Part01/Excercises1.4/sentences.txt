@@ -1,0 +1,113 @@
+
+# EXERCISE 1.4: MISSING DEPENDENCIES
+
+# Start a Ubuntu image with the process sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+
+
+# You will notice that a few things required for proper execution are missing. 
+# Be sure to remind yourself which flags to use so that the container actually waits for input.
+# Note also that curl is NOT installed in the container yet. You will have to install it from inside of the container.
+# Test inputting helsinki.fi into the application. It should respond with something like
+
+<html>
+  <head>
+    <title>301 Moved Permanently</title>
+  </head>
+
+  <body>
+    <h1>Moved Permanently</h1>
+    <p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+  </body>
+</html>
+
+This time return the command you used to start process and the command(s) you used to fix the ensuing problems.
+
+Hint for installing the missing dependencies you could start a new process with docker exec.
+
+This exercise has multiple solutions, if the curl for helsinki.fi works then it's done. Can you figure out other (smart) solutions?
+
+
+
+# # # Sentences I used to start procces (and doesn't work)
+docker run -it --name new001 ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+
+
+
+# # # Sentences I used to fix the problem...
+# New docker images, run and named "new001"
+docker run -d -it --name new001 ubuntu
+
+# Bash on docker...
+docker exec -it new001 bash
+
+# Sentences to use inside docker conteiner
+# 1) Update...
+apt-get update
+
+# 2) curl install
+apt-get -y install curl
+
+# 3) The sentences to use inside docker...
+while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done
+
+# 4) Web page...
+helsinki.fi
+
+
+
+
+
+# Cleaning section
+###############################################################################################
+
+
+# Docker container list...
+docker ps -a
+
+
+# Docker images list
+docker images
+
+
+
+
+# Stoping all docker conteiners...
+docker stop $(docker ps -aq)
+
+
+# Removing all docker containers
+docker rm $(docker ps -aq)
+
+
+# Removing all docker images
+docker rmi $(docker images -aq)
+
+
+
+
+# Prune volumens...
+docker volume prune -f
+
+# Prune containers
+docker container prune -f
+
+# Prune images
+docker image prune -f
+
+
+
+# Prune system
+docker system prune -f
+
+
+
+# Docker containers list...
+docker ps -a
+
+
+# Docker images list...
+docker images ls
+
+
+
+

@@ -1,0 +1,89 @@
+
+# EXERCISE 1.5: SIZES OF IMAGES
+
+
+# New docker images, run and named "new001"
+docker run -d -it --name new001 devopsdockeruh/simple-web-service:ubuntu
+
+
+# Inside "new001" with bash...
+docker exec -it new001 bash
+
+
+# Comands to put inside docker
+tail -f ./text.log
+
+
+#####################################################################################
+
+
+
+# New docker images, run and named "new002"
+docker run -d -it --name new002 devopsdockeruh/simple-web-service:alpine
+
+
+# Inside "new001" with sh...
+docker exec -it new002 sh
+
+
+# Comands to put inside docker
+tail -f ./text.log
+
+
+
+
+
+# Cleaning section
+###############################################################################################
+
+
+# Docker container list...
+docker ps -a
+
+
+# Docker images list
+docker images
+
+
+
+
+# Stoping all docker conteiners...
+docker stop $(docker ps -aq)
+
+
+# Removing all docker containers
+docker rm $(docker ps -aq)
+
+
+# Removing all docker images
+docker rmi $(docker images -aq)
+
+
+
+
+# Prune volumens...
+docker volume prune -f
+
+# Prune containers
+docker container prune -f
+
+# Prune images
+docker image prune -f
+
+
+
+# Prune system
+docker system prune -f
+
+
+
+# Docker containers list...
+docker ps -a
+
+
+# Docker images list...
+docker images ls
+
+
+
+

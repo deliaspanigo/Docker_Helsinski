@@ -1,0 +1,56 @@
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+8a1e25ce7c4f: Pull complete 
+e78b137be355: Pull complete 
+39fc875bd2b2: Pull complete 
+035788421403: Pull complete 
+87c3fb37cbf2: Pull complete 
+c5cdd1ce752d: Pull complete 
+33952c599532: Pull complete 
+Digest: sha256:6db391d1c0cfb30588ba0bf72ea999404f2764febf0f1f196acd5867ac7efa7e
+Status: Downloaded newer image for nginx:latest
+17bc310eb40d3f67bcf69b3672dc0713f980cbf9276be9be309463d3cb370361
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker run -d nginx
+12090c86d3a66f969a0e0a8a69cdec74e8ad42147040bcdc2078537808946a40
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker run -d nginx
+a160d3e212f0e3e520c371340765fe10e4bed553ed0f9c3ea61c18f9f1b43a37
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    92b11f67642b   4 weeks ago   187MB
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+a160d3e212f0   nginx     "/docker-entrypoint.…"   35 seconds ago   Up 34 seconds   80/tcp    pensive_kapitsa
+12090c86d3a6   nginx     "/docker-entrypoint.…"   38 seconds ago   Up 37 seconds   80/tcp    sleepy_mcclintock
+17bc310eb40d   nginx     "/docker-entrypoint.…"   44 seconds ago   Up 43 seconds   80/tcp    vigilant_elion
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker stop 12
+12
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker stop 17
+17
+
+
+(base) legion@LegionUbuntu:~/MyGitHub/Docker_Helsinski/Part01$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES
+a160d3e212f0   nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes               80/tcp    pensive_kapitsa
+12090c86d3a6   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 6 seconds ago             sleepy_mcclintock
+17bc310eb40d   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 2 seconds ago             vigilant_elion
+
+
+
