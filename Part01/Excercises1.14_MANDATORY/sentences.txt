@@ -1,9 +1,20 @@
 
-# MANDATORY EXERCISE 1.12: HELLO, FRONTEND!
+# MANDATORY EXERCISE 1.14: ENVIRONMENT
 
-# docker build -t my_image .
-# docker run -it --name my_container my_image /bin/bash
-# docker run -it --name my_container -p 5000:5000 my_image
+
+# NET
+docker network create first_net
+
+# BACK
+docker build -t cont_back -f example-backend/Dockerfile example-backend
+docker run -it --rm --name img_back --network first_net -p 8080:8080 cont_back
+
+
+# FRONT
+docker build -t cont_front -f example-frontend/Dockerfile example-frontend
+docker run -it --name image_front --network first_net -p 5000:5000 cont_front
+
+
 
 # Cleaning section
 ###############################################################################################
@@ -31,6 +42,7 @@ docker rm $(docker ps -aq)
 docker rmi $(docker images -aq)
 
 
+docker network prune -f
 
 
 # Prune volumens...
