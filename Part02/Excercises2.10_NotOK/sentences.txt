@@ -1,5 +1,25 @@
+# EXERCISE 2.2
 
-# MANDATORY EXERCISE 1.14: ENVIRONMENT
+
+# Image - BACK
+docker build -t img_back -f example-backend/Dockerfile example-backend
+
+# Image - FRONT
+docker build -t img_front -f example-frontend/Dockerfile example-frontend
+
+# Image - REDIS
+docker pull redis
+
+
+
+# Levantar el docker
+docker compose up -d
+
+# Ingresar a internet por consola
+scurl localhost:8080
+
+########################################################
+
 
 
 # NET
@@ -7,15 +27,14 @@ docker network create first_net
 
 # BACK
 docker build -t cont_back -f example-backend/Dockerfile example-backend
-docker run -itd --rm --name img_back --network first_net -p 8080:8080 cont_back
+docker run -it --rm --name img_back --network first_net -p 8080:8080 cont_back
 
 
 # FRONT
 docker build -t cont_front -f example-frontend/Dockerfile example-frontend
-docker run -itd --name image_front --network first_net -p 5000:5000 cont_front
+docker run -it --name image_front --network first_net -p 5000:5000 cont_front
 
-
-
+######################################################################################################
 # Cleaning section
 ###############################################################################################
 
@@ -42,11 +61,14 @@ docker rm $(docker ps -aq)
 docker rmi $(docker images -aq)
 
 
-docker network prune -f
 
+# Prune volumens...
+docker network prune -f
 
 # Prune volumens...
 docker volume prune -f
+
+docker network prune -f
 
 # Prune containers
 docker container prune -f

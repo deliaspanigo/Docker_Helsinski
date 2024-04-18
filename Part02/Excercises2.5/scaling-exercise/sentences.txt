@@ -1,0 +1,2 @@
+# The sentece
+docker up --scale compute=4

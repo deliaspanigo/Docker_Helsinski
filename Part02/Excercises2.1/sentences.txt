@@ -1,18 +1,9 @@
 
-# MANDATORY EXERCISE 1.14: ENVIRONMENT
+# EXERCISE 2.1
+
+docker compose up
 
 
-# NET
-docker network create first_net
-
-# BACK
-docker build -t cont_back -f example-backend/Dockerfile example-backend
-docker run -itd --rm --name img_back --network first_net -p 8080:8080 cont_back
-
-
-# FRONT
-docker build -t cont_front -f example-frontend/Dockerfile example-frontend
-docker run -itd --name image_front --network first_net -p 5000:5000 cont_front
 
 
 
@@ -42,7 +33,6 @@ docker rm $(docker ps -aq)
 docker rmi $(docker images -aq)
 
 
-docker network prune -f
 
 
 # Prune volumens...

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    image: img_back:latest
+    # Aquí puedes configurar otras opciones para tu servicio backend, como volúmenes, etc.
+    ports:
+      - "8080:8080"
+    networks:
+      - mi_red
+
+  frontend:
+    image: img_front:latest
+    # Aquí puedes configurar otras opciones para tu servicio frontend, como volúmenes, etc.
+    ports:
+      - "5000:5000"
+    networks:
+      - mi_red
+
+networks:
+  mi_red:
+    driver: bridge
+
