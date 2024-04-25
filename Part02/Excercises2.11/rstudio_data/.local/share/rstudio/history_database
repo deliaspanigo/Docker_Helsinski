@@ -61,3 +61,7 @@
 1714086846133:# Instalar la librería desde GitHub
 1714086846133:remotes::install_github("deliaspanigo/Rscience", force = T)
 1714086944300:Rscience:::app_03_Rscience()
+1714087060804:remove.packages("Rscience")
+1714087062828:# Instalar la librería desde GitHub
+1714087062828:remotes::install_github("deliaspanigo/Rscience", force = T)
+1714087084425:Rscience:::app_03_Rscience()
