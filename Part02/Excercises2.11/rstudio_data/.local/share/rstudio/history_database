@@ -1,0 +1,63 @@
+1713489507733:remove.packages("Rscience")
+1713489508072:# Libreria
+1713489508072:library(remotes)
+1713489508086:# Instalar la librería desde GitHub
+1713489508086:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713489711853:Rscience:::app_02_Rscience()
+1713489724491:install.packages("emmeans")
+1713489740519:Rscience:::app_02_Rscience()
+1713490169685:remove.packages("Rscience")
+1713490191087:# Instalar la librería desde GitHub
+1713490191087:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713490218400:Rscience:::app_02_Rscience()
+1713490255910:Rscience:::app_02_Rscience()
+1713490977125:remove.packages("Rscience")
+1713490989686:# Libreria
+1713490989686:library(remotes)
+1713490990330:# Instalar la librería desde GitHub
+1713490990330:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713491021113:Rscience:::app_02_Rscience()
+1713491041221:Rscience::Rscience_Ejer_13_03
+1713491158194:library("Rscience")
+1713491160866:Rscience:::app_02_Rscience()
+1713491223034:Rscience:::app_02_Rscience()
+1713491265161:library("Rscience")
+1713491269366:Rscience:::app_02_Rscience()
+1713537778618:remove.packages("Rscience")
+1713537789900:# Instalar la librería desde GitHub
+1713537789900:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713537922958:Rscience:::app_02_Rscience()
+1713537975527:library("Rscience")
+1713537986409:Rscience:::app_02_Rscience()
+1713550777400:remove.packages("Rscience")
+1713550789031:# Instalar la librería desde GitHub
+1713550789032:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713550858634:Rscience:::app_03_Rscience()
+1713993532163:remove.packages("Rscience")
+1713993547480:# Instalar la librería desde GitHub
+1713993547480:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713993656124:Rscience:::app_03_Rscience()
+1713993689959:Rscience:::app_01_Rscience()
+1713993744849:remove.packages("Rscience")
+1713993755477:# Instalar la librería desde GitHub
+1713993755477:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713993824158:Rscience:::app_03_Rscience()
+1713994592420:remove.packages("Rscience")
+1713994604715:# Instalar la librería desde GitHub
+1713994604716:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713994636235:Rscience:::app_03_Rscience()
+1713995077263:remove.packages("Rscience")
+1713995079715:# Instalar la librería desde GitHub
+1713995079715:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713995445645:remove.packages("Rscience")
+1713995454991:# Instalar la librería desde GitHub
+1713995454991:remotes::install_github("deliaspanigo/Rscience", force = T)
+1713995486372:Rscience:::app_03_Rscience()
+1713995548310:Rscience:::app_01_Rscience()
+1713996416327:Rscience:::app_01_Rscience()
+1714086840208:remove.packages("Rscience")
+1714086843012:# Libreria
+1714086843013:library(remotes)
+1714086846133:# Instalar la librería desde GitHub
+1714086846133:remotes::install_github("deliaspanigo/Rscience", force = T)
+1714086944300:Rscience:::app_03_Rscience()

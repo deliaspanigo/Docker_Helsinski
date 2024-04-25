@@ -10,4 +10,11 @@ scurl localhost:8787
 
 ########################################################
 
+remove.packages("Rscience")
+# Libreria
+library(remotes)
 
+# Instalar la librería desde GitHub
+remotes::install_github("deliaspanigo/Rscience", force = T)
+
+###################################################################
